@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            CGPA CALCULATOR
+        </title>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body {
+    background-image: linear-gradient(90deg, pink ,#BBC2C8);
+    color:black;
+  }  
+ 
+  input{
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 20%;
+    text-align: center;
+  }
+        </style>
+    </head>
+    <body style="background-color:darkgrey;">
+        <br>
+        <h3 style="text-align: center;">Calculating cgpa</h3>
+        <div class="text-center">
+            <center>
+            <form id="frm" style="border: solid 2px; width: 50%; margin-top: 2%; ">
+                <fieldset>
+                Student name:
+                <input type="text">
+                <br><br>
+                Register num:
+                <input type="text">
+                <br><br>
+                 Mark of sub1:
+                <input type="text" id="txt1">
+                <br><br>
+                Mark of sub2:
+                <input type="text" id="txt2">
+                <br><br>
+                Mark of sub3:
+                <input type="text" id="txt3">
+                <br><br>
+                Mark of sub4:
+                <input type="text" id="txt4">
+                <br><br>
+                Mark of sub5:
+                <input type="text" id="txt5">
+                <br><br>
+                Last sem Gpa: 
+                <input type="text" id="gp">
+                <br><br>
+                
+                <input type="button" id="btn" onclick="mei()" value="Get cgpa">
+                <hr>
+                <br>
+                <p id="re1"></p>
+               
+                <p id="re2"></p>
+            </fieldset>
+        </center>
+            </form>
+            <script>
+                function mei(){
+                    let a= document.getElementById("txt1");
+                    let b= document.getElementById("txt2");
+                    let c= document.getElementById("txt3");
+                    let d= document.getElementById("txt4");
+                    let e= document.getElementById("txt5");
+                    let f=parseInt(document.getElementById("gp").value);
+                    let g=(parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)+parseInt(e.value))/50;
+                    let h = (f+g)/2;
+                    document.getElementById("re1").innerHTML=("Your current sem gpa: "+ g);
+                   document.getElementById("re2").innerHTML=("Your CGPA is:  "+ h);
+
+                 }
+            </script>
+        </div>
+    </body>
+</html>
